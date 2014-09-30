@@ -54,7 +54,7 @@ $(document).ready(function() {
 		$('#result').append(' \n');
 		$('#result').append('    .container                                  { position: relative; width: ' + w + 'px; margin: 0 auto; padding: 0; }\n');
 		$('#result').append('    .container .column,\n');
-		$('#result').append('    .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }\n');
+		$('#result').append('    .container .columns                         { float: left; display: inline; margin-left: ' + m + 'px; margin-right: ' + m + 'px; }\n');
 		$('#result').append('    .row                                        { margin-bottom: 20px; }\n');
 		$('#result').append(' \n');
 		$('#result').append('    /* Nested Column Classes */\n');
