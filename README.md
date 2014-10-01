@@ -12,4 +12,5 @@ That's it ... It generates the skeleton.css file for you!
 ---
 
 Skeleton V1.2 is copyright of Dave Gamache
+
 Visit www.getskeleton.com
