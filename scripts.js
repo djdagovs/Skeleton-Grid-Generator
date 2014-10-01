@@ -324,10 +324,6 @@ $(document).ready(function() {
 		$('#result').append('      width: 0;\n');
 		$('#result').append('      height: 0;\n');
 		$('#result').append('    }\n');
-		$('#result').append(');\n');
-		$('#result').append(' \n');
-		$('#result').append('	});\n');
-		$('#result').append(' \n');
 		
 	});
 
