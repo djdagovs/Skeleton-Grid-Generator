@@ -9,4 +9,7 @@ Really easy to use:
 
 That's it ... It generates the skeleton.css file for you!
 
-*The script doesn't retain the 960 grid layout at the moment. I'll be adding that shortly.*
+---
+
+Skeleton V1.2 is copyright of Dave Gamache
+Visit www.getskeleton.com
