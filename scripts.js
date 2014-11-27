@@ -11,24 +11,24 @@ $(document).ready(function() {
 		var m = $('input#margin').val();
 	
 		if (w === '') {
-			w = $('input#width').attr('placeholder');
+			w = parseInt($('input#width').attr('placeholder'));
 		} else {
 			w = parseInt(w);
 		}
 	
 		if (c === '') {
-			c = $('input#columns').attr('placeholder');
+			c = parseInt($('input#columns').attr('placeholder'));
 		} else {
 			c = parseInt(c);
 		}
 	
 		if (m === '') {
-			m = $('input#margin').attr('placeholder');
+			m = parseInt($('input#margin').attr('placeholder'));
 		} else {
 			m = parseInt(m);
 		}
 		
-		$('#result').html('\\*\n');
+		$('#result').html('/*\n');
 		$('#result').append('* Skeleton V1.2\n');
 		$('#result').append('* Copyright 2011, Dave Gamache\n');
 		$('#result').append('* www.getskeleton.com\n');
@@ -63,22 +63,22 @@ $(document).ready(function() {
 		$('#result').append(' \n');
 		$('#result').append('    /* Base Grid */\n');
 		$('#result').append('    .container .one.column,\n');
-		$('#result').append('    .container .one.columns                     { width: ' + (w / c * 1 - m) + 'px;  }\n');
-		$('#result').append('    .container .two.columns                     { width: ' + (w / c * 2 - m) + 'px; }\n');
-		$('#result').append('    .container .three.columns                   { width: ' + (w / c * 3 - m) + 'px; }\n');
-		$('#result').append('    .container .four.columns                    { width: ' + (w / c * 4 - m) + 'px; }\n');
-		$('#result').append('    .container .five.columns                    { width: ' + (w / c * 5 - m) + 'px; }\n');
-		$('#result').append('    .container .six.columns                     { width: ' + (w / c * 6 - m) + 'px; }\n');
-		$('#result').append('    .container .seven.columns                   { width: ' + (w / c * 7 - m) + 'px; }\n');
-		$('#result').append('    .container .eight.columns                   { width: ' + (w / c * 8 - m) + 'px; }\n');
-		$('#result').append('    .container .nine.columns                    { width: ' + (w / c * 9 - m) + 'px; }\n');
-		$('#result').append('    .container .ten.columns                     { width: ' + (w / c * 10 - m) + 'px; }\n');
-		$('#result').append('    .container .eleven.columns                  { width: ' + (w / c * 11 - m) + 'px; }\n');
-		$('#result').append('    .container .twelve.columns                  { width: ' + (w / c * 12 - m) + 'px; }\n');
-		$('#result').append('    .container .thirteen.columns                { width: ' + (w / c * 13 - m) + 'px; }\n');
-		$('#result').append('    .container .fourteen.columns                { width: ' + (w / c * 14 - m) + 'px; }\n');
-		$('#result').append('    .container .fifteen.columns                 { width: ' + (w / c * 15 - m) + 'px; }\n');
-		$('#result').append('    .container .sixteen.columns                 { width: ' + (w / c * 16 - m) + 'px; }\n');
+		$('#result').append('    .container .one.columns                     { width: ' + (w / c * 1 - m * 2) + 'px;  }\n');
+		$('#result').append('    .container .two.columns                     { width: ' + (w / c * 2 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .three.columns                   { width: ' + (w / c * 3 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .four.columns                    { width: ' + (w / c * 4 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .five.columns                    { width: ' + (w / c * 5 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .six.columns                     { width: ' + (w / c * 6 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .seven.columns                   { width: ' + (w / c * 7 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .eight.columns                   { width: ' + (w / c * 8 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .nine.columns                    { width: ' + (w / c * 9 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .ten.columns                     { width: ' + (w / c * 10 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .eleven.columns                  { width: ' + (w / c * 11 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .twelve.columns                  { width: ' + (w / c * 12 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .thirteen.columns                { width: ' + (w / c * 13 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .fourteen.columns                { width: ' + (w / c * 14 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .fifteen.columns                 { width: ' + (w / c * 15 - m * 2) + 'px; }\n');
+		$('#result').append('    .container .sixteen.columns                 { width: ' + (w / c * 16 - m * 2) + 'px; }\n');
 		$('#result').append(' \n');
 		$('#result').append('    .container .one-third.column                { width: ' + ((w - m) / 3) + 'px; }\n');
 		$('#result').append('    .container .two-thirds.column               { width: ' + ((w - m) / 3 * 2) + 'px; }\n');
@@ -104,6 +104,10 @@ $(document).ready(function() {
 		$('#result').append(' \n');
 		$('#result').append('/* #Base 960 Grid\n');
 		$('#result').append('================================================== */\n');
+		$('#result').append(' \n');
+		$('#result').append('    /* Note: Design for a width of 960px */\n');
+		$('#result').append(' \n');
+		$('#result').append('    @media only screen and (min-width: 768px) and (max-width: ' + (w - 1) + 'px) {\n');
 		$('#result').append(' \n');
 		$('#result').append('    .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }\n');
 		$('#result').append('    .container .column,\n');
@@ -152,7 +156,7 @@ $(document).ready(function() {
 		$('#result').append('    .container .offset-by-thirteen              { padding-left: 780px; }\n');
 		$('#result').append('    .container .offset-by-fourteen              { padding-left: 840px; }\n');
 		$('#result').append('    .container .offset-by-fifteen               { padding-left: 900px; }\n');
-		$('#result').append(' \n');
+		$('#result').append('    }\n');
 		$('#result').append(' \n');
 		$('#result').append(' \n');
 		$('#result').append('/* #Tablet (Portrait)\n');
